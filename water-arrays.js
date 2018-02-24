@@ -1,4 +1,3 @@
-
 var drops =[]
 
 
@@ -6,10 +5,10 @@ function setup() {
   createCanvas(400, 400);
   colorMode(HSB)
 
-	for (var index = 0; index < 100; index = index + 1) {
+	for (var index = 0; index < 200; index = index + 1) {
 		drops[index] = {
 			x : 230,
-			y : 220,
+			y : 120,
 			dspeed : random(1, 5),
 			ddia : random(10, 30),
 			c : color (240, random(360), random(360))
