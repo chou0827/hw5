@@ -12,9 +12,9 @@ function setup() {
       x: width / 2,
       y: height / 2,
 			dia:10,
-      xd: random(-10, 5),
+      xd: random(-5, 10),
       yd: random(-2, 2),
-      c: color(random(0,120), 60, 100)
+      c: color(random(0,120), random(60,120), 100)
     }
   }
 }
@@ -26,15 +26,19 @@ function draw() {
 
 function draw() {
   for (var index = 0; index < 50; index = index + 1) {
-
+    // get circle object
     var circle = circle1[index];
 
+		
+    // draw it
     fill(circle.c);
     ellipse(circle.x, circle.y, circle.dia);
 
+    // move it according to direction
     circle.x = circle.x + circle.xd;
     circle.y = circle.y + circle.yd;
 
+    // check boundaries and update directions
     if (circle.x > width || circle.x < 0) {
       circle.xd = -circle.xd;
     }
@@ -49,3 +53,4 @@ function draw() {
 		
   }
 }
+
